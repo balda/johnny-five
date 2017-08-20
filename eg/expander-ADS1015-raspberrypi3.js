@@ -25,6 +25,7 @@ board.on( "ready", function() {
     board: expander,
     pin: "A0"
   });
+  analog.scale(0, 1023);
   analog.on("data", function() {
     bar.raw.update(this.raw);
     bar.value.update(this.value);

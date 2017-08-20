@@ -8,8 +8,6 @@
 Using an ADS1015 Expander as a Virtual Board (4 Pin Analog Input)
 
 
-##### Documentation
-
 **Expander Options**
 
 <span class="abbreviate-table">
@@ -63,6 +61,7 @@ board.on( "ready", function() {
     board: expander,
     pin: "A0"
   });
+  analog.scale(0, 1023);
   analog.on("data", function() {
     bar.raw.update(this.raw);
     bar.value.update(this.value);
@@ -111,6 +110,7 @@ board.on( "ready", function() {
     board: expander,
     pin: "A0"
   });
+  analog.scale(0, 1023);
   analog.on("data", function() {
     bar.raw.update(this.raw);
     bar.value.update(this.value);
@@ -165,6 +165,7 @@ board.on( "ready", function() {
     board: expander,
     pin: "A0"
   });
+  analog.scale(0, 1023);
   analog.on("data", function() {
     bar.raw.update(this.raw);
     bar.value.update(this.value);
